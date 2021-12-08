@@ -98,12 +98,16 @@ function Operator() {
             <InputStyeles
               type='number'
               {...register("summ", {
-                
-                required: "Поле обязательно для заполнения",
-                maxLength: {
-                  value: 6,
-                  message: "Слишком большая сумма",
+                max: {
+                  value: 1000,
+                  message: "Максимум 1000 руб.",
                 },
+                min: {
+                  value: 1,
+                  message: "Минимум 1 руб.",
+                },
+                required: "Поле обязательно для заполнения",
+               
               })}
             />
           </label>
